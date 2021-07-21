@@ -1,23 +1,49 @@
 import React from "react";
 import Projects from "./Projects";
 import "./App.css";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+// import "semantic-ui-css/semantic.min.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
+
+const httpLink = createHttpLink({
+  url: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Xunaxidonita</h1>
-        <menu>
-          <a href="#1">About me</a>
-          <a href="#2">Portfolio</a>
-          <a href="#3">Contact</a>
-          <a href="#3">Resume</a>
-        </menu>
-      </header>
-      <main>
-        <Projects></Projects>
-      </main>
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/portfolio" component={Projects} />
+          <Route exact path="/contact" component={Contact} />
+          <Route path="/resume" component={Resume} />
+        </Switch>
+      </Router>
+    </ApolloProvider>
   );
 }
 
