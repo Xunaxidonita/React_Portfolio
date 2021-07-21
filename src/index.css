@@ -59,12 +59,24 @@ footer {
   background-color: rgb(112, 9, 9);
   color: white;
   padding: 30px;
-  position: fixed;
+  position: absolute;
+  bottom: 0;
   display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 0 auto;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0px auto 0px auto;
+  width: 50%;
+}
+
+.links a {
+  margin: 0 15px 0 15px;
+  color: gold;
 }

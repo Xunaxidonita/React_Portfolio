@@ -1,5 +1,4 @@
 import React from "react";
-import Projects from "./Projects";
 import "./App.css";
 import {
   ApolloClient,
@@ -11,6 +10,9 @@ import { setContext } from "@apollo/client/link/context";
 // import "semantic-ui-css/semantic.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainPage from "./components/MainPage";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Resume from "./components/Resume";
 
 const httpLink = createHttpLink({
   url: "/graphql",
@@ -38,7 +40,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/portfolio" component={Projects} />
+          <Route exact path="/portfolio" component={MainPage} />
           <Route exact path="/contact" component={Contact} />
           <Route path="/resume" component={Resume} />
         </Switch>
