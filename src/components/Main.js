@@ -8,7 +8,7 @@ const Main = () => {
       key: "rb",
       title: "Run Budy",
       image: "/images/run-buddy.png",
-      deployed: "https://lernantino.github.io/run-buddy/",
+      deployed: "https://xunaxidonita.github.io/run-buddy/",
       code: "https://github.com/Xunaxidonita/run-buddy",
     },
     {
