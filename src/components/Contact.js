@@ -1,10 +1,16 @@
 import React from "react";
-import Header from "./Header";
+import HeaderBar from "./Header";
 import Footer from "./Footer";
+import ContactForm from "./ContactForm";
+import { Container } from "semantic-ui-react";
 
 const Contact = () => (
   <>
-    <Header></Header>
+    <HeaderBar></HeaderBar>
+    <h2 style={{ marginLeft: "4%" }}>Contact me</h2>
+    <Container>
+      <ContactForm></ContactForm>
+    </Container>
     <Footer></Footer>
   </>
 );

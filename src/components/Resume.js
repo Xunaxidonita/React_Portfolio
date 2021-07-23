@@ -1,10 +1,13 @@
 import React from "react";
-import Header from "./Header";
+import HeaderBar from "./Header";
 import Footer from "./Footer";
+import { Image } from "semantic-ui-react";
 
 const Resume = () => (
   <>
-    <Header></Header>
+    <HeaderBar></HeaderBar>
+    <h2 style={{ marginLeft: "4%" }}>Resume</h2>
+    <Image src="/images/Resume.png"></Image>
     <Footer></Footer>
   </>
 );

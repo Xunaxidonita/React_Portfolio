@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-// import "semantic-ui-css/semantic.min.css";
+import "semantic-ui-css/semantic.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainPage from "./components/MainPage";
 import About from "./components/About";

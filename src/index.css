@@ -19,9 +19,6 @@ code {
 }
 
 header {
-  background-image: url("./assets/images/background.webp");
-  background-position: bottom;
-  background-size: cover;
   height: 120px;
   display: flex;
   flex-wrap: wrap;
@@ -50,8 +47,8 @@ menu {
   font-weight: bolder;
 }
 
-menu a {
-  margin-left: 30px;
+.menu a {
+  margin-left: 3%;
   color: indigo;
 }
 
@@ -74,9 +71,23 @@ footer {
   text-align: center;
   margin: 0px auto 0px auto;
   width: 50%;
+  background-color: rgb(107, 4, 4);
 }
 
 .links a {
-  margin: 0 15px 0 15px;
+  margin: 5px 15px 5px 15px;
   color: gold;
+}
+
+.menu {
+  background: none;
+}
+
+@media screen and (max-width: 575px) {
+  .cards {
+    justify-content: center;
+  }
+  .links {
+    width: 70%;
+  }
 }

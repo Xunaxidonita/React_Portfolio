@@ -4,19 +4,15 @@ import "semantic-ui-css/semantic.min.css";
 
 const ProjectCard = ({ project }) => (
   <Card>
-    <Image src="{../assets/images/}" wrapped ui={false} />
+    <Image src={project.image} wrapped ui={false} />
     <Card.Content>
       <Card.Header>{project.title}</Card.Header>
-      <Card.Meta>{project.}</Card.Meta>
-      <Card.Description>
-        Daniel is a comedian living in Nashville.
-      </Card.Description>
+      <Card.Meta>
+        <a href={project.code}>GitHub</a>
+      </Card.Meta>
     </Card.Content>
     <Card.Content extra>
-      <a>
-        <Icon name="projectname" />
-        ProjectName
-      </a>
+      <a href={project.deployed}>Run Buddy</a>
     </Card.Content>
   </Card>
 );

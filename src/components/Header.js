@@ -1,11 +1,30 @@
 import React from "react";
 import Nav from "./Nav";
+import { Header, Segment } from "semantic-ui-react";
 
-const Header = () => (
-  <header>
-    <h1>Xunaxidonita</h1>
-    <Nav></Nav>
-  </header>
+const HeaderBar = () => (
+  <Segment
+    style={{
+      backgroundImage: "url('/images/background.png')",
+      backgroundPosition: "bottom",
+      backgroundSize: "cover",
+      borderRadius: "0px",
+    }}
+  >
+    <Header
+      as="h1"
+      style={{
+        fontWeight: "bolder",
+        color: "indigo",
+        background: "none",
+      }}
+    >
+      Xunaxidonita
+      <Nav
+        style={{ background: "none", border: "none", boxShadow: "none" }}
+      ></Nav>
+    </Header>
+  </Segment>
 );
 
-export default Header;
+export default HeaderBar;
