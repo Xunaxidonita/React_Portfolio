@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 const ProjectCard = ({ project }) => (
@@ -8,11 +8,15 @@ const ProjectCard = ({ project }) => (
     <Card.Content>
       <Card.Header>{project.title}</Card.Header>
       <Card.Meta>
-        <a href={project.code}>GitHub</a>
+        <a target="_blank" href={project.code}>
+          GitHub
+        </a>
       </Card.Meta>
     </Card.Content>
     <Card.Content extra>
-      <a href={project.deployed}>Run Buddy</a>
+      <a target="_blank" href={project.deployed}>
+        Run Buddy
+      </a>
     </Card.Content>
   </Card>
 );
