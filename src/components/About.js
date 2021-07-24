@@ -9,7 +9,7 @@ const About = () => (
     <HeaderBar></HeaderBar>
     <h2 style={{ marginLeft: "4%" }}>About me</h2>
     <Image
-      src="/images/Donita.png"
+      src={`${process.env.PUBLIC_URL}/images/Donita.png`}
       alt="Donaji Velazquez's profile picture"
       style={{
         borderRadius: "8px",

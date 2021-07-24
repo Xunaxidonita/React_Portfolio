@@ -5,7 +5,7 @@ import { Header, Segment } from "semantic-ui-react";
 const HeaderBar = () => (
   <Segment
     style={{
-      backgroundImage: "url('/images/background.png')",
+      backgroundImage: `url('${process.env.PUBLIC_URL}/images/background.png')`,
       backgroundPosition: "bottom",
       backgroundSize: "cover",
       borderRadius: "0px",

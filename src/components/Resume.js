@@ -7,7 +7,7 @@ const Resume = () => (
   <>
     <HeaderBar></HeaderBar>
     <h2 style={{ marginLeft: "4%" }}>Resume</h2>
-    <Image src="/images/Resume.png"></Image>
+    <Image src={`${process.env.PUBLIC_URL}/images/Resume.png`}></Image>
     <Footer></Footer>
   </>
 );
